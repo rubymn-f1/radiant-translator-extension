@@ -1,6 +1,6 @@
 class TranslateResponseCache
 
-  [SiteController, Admin::AbstractModelController, Admin::PageController].each do |klass|
+  [SiteController, Admin::ResourceController, Admin::PagesController].each do |klass|
     klass.class_eval {
       # yes, i know this is really bad, but we need it. otherwise, we'll have to reinvent the wheel
       around_filter :do_something_bad
